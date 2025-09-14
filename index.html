@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Under the sea</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+	</head>
+	    <body>
+            <h1>Journey Underwater</h1>
+
+                <div class="reels">
+                    <div id="reel1" class="reel"><img src="images/pearl.jpg" class="initial"></div>
+                    <div id="reel2" class="reel"><img src="images/pearl.jpg" class="initial"></div>
+                    <div id="reel3" class="reel"><img src="images/pearl.jpg" class="initial"></div>
+                </div>
+
+                <button onclick="spin(10)" id="minBtn">Bet 10 coins</button>
+                <button onclick="spin(50)" id="maxBtn">Bet 50 coins</button>
+
+                <div class="balance">Coins remaining: <span id="balance">1000</span></div>
+                <div id="message"></div>
+                
+		    <script src="app.js"></script>
+	    </body>
+</html>
+
