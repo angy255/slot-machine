@@ -51,6 +51,7 @@ button {
   color:white;
   border-radius: 20px;
   cursor: pointer;
+  border: 2px solid black;
 }
 
 button:disabled {
