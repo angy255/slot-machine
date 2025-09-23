@@ -6,6 +6,8 @@
   font-style: italic;
 }
 
+/* I asked chatgpt for an atlantis themed font and liked marcellus */
+
 .initial{
   width:100%;
 }
@@ -53,6 +55,9 @@ button {
   cursor: pointer;
   border: 2px solid black;
 }
+
+/* I asked chatgpt how to disable my buttons and cursor so users would not be tempted to continue clicking and possibly 
+miss a jackpot surprise */
 
 button:disabled {
   background-color: gray;      

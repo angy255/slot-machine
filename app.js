@@ -1,15 +1,17 @@
 // sound effects
+//I like this way of adding sound effects because it makes the most sense to me, it is something I learned from
+// a classmate and mdn and I have used it before in my mandarin-calculator-app https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio
 
 const spinSound = new Audio('images/bubbling.mp3');
 const winSound = new Audio('images/whale.mp3');
 const coinSound = new Audio('images/coin.mp3');
 
 
-//start off with this amount
+//start off with this amount for users
 
 let balance = 1000;
 
-// an array of all the images
+// an array of all the images....learning that an array is a list made this make sense
 
 const symbols = [
       'images/conch.jpg',
@@ -25,12 +27,16 @@ const symbols = [
     ];
 
 
-// Get random symbol from the array
+// Get random symbol from the array function...I saw how another classmate used Math.random in their code and thought it looked great
+// so I found it on mdn https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+
     function getRandomSymbol() {
       return symbols[Math.floor(Math.random() * symbols.length)];
     }
 
-// Set an image inside a reel
+// Set an image inside a reel...I used chatgpt to help me with this. I was having trouble getting my images to 
+// appear when they would randomize. some images appeared and others did not, some looked great and fit well and
+// others were not large enough or spilling out of their respective 'spots' 
     function setReelImage(reelId, imageUrl) {
       const reel = document.getElementById(reelId);
       reel.innerHTML = `<img src="${imageUrl} "class="symbol-img">`;
@@ -58,7 +64,8 @@ const symbols = [
       spinSound.play();
 
 // making the reels spin so it feels more like a slot machine (random flash) started at 10 for spin count and 100 ms but 20 and 50ms looks cooler
-      
+// I used chatgpt for help with this...it gave me a more advanced version on how to do this so I stuck with this one
+// so I could understand what I was typing and then played around with the spin count to get the effect I wanted 
         let spinCount = 20;
         const spinInterval = setInterval(() => {
         setReelImage('reel1', getRandomSymbol());
@@ -76,10 +83,10 @@ const symbols = [
 
 
 
-
-
 // Create final result function
-
+//same idea here, I asked chatgpt for help on the function and even considered randomizing my messages 
+// but was provided with answers that were too advanced so I just decided to keep it simple with one message 
+//this way I could look back and explain what had been done
       function showFinalResult(bet) {
 
       const reel1 = getRandomSymbol();
@@ -110,6 +117,7 @@ const symbols = [
 
 
 //create function for disable and enable buttons
+//boolean created here to have buttons disabled and enabled before and after spins
 
     function disableButtons() {
       document.getElementById('minBtn').disabled = true;
